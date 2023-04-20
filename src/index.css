@@ -1,13 +1,120 @@
+*{
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* -webkit-font-smoothing: antialiased; */
+  /* -moz-osx-font-smoothing: grayscale; */
+  background-color: black;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root{
+  --components-background:  rgb(36, 34, 34);
+  --button-color: ;
+  --components-font-folor: white;
+
+}
+
+.App{
+  display: grid;
+  grid-template-columns: auto 6fr;
+  gap: 25px;
+  width: 100vw;
+  height: 100vh;
+}
+.sidebar {
+  grid-area: 1/1/2/2;
+  background-color: rgb(188, 255, 152);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(36, 34, 34);;
+  color: var(--components-font-folor);
+}
+
+.sidebar>ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  line-height: 50px;
+  padding: 15px;
+}
+
+.sidebar>ul>li{
+  font-weight: bold;
+}
+
+main {
+  grid-area: 1/2/2/7;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3,1fr);
+  gap: 25px;
+  padding-top: 50px;
+  padding-right: 10px;
+
+}
+
+.rating-average {
+  background-color: var(--components-background);
+  color: var(--components-font-folor);
+}
+
+
+.sentiment-analysis {
+  background-color: var(--components-background);
+  color: var(--components-font-folor);
+}
+
+.website-visitors {
+  background-color: var(--components-background);
+  color: var(--components-font-folor);
+  /* padding: 15px;
+  padding-top: 0; */
+}
+
+
+.sentiment-analysis,
+.reviews,
+.rating-average
+{
+  text-align: center;
+}
+
+.reviews {
+  grid-area: 2/1/4/4;
+  background-color: var(--components-background);
+  color: var(--components-font-folor);
+}
+
+
+
+main>div { /* all components in  main */
+  box-sizing: border-box;
+  border-radius: 15px;
+  text-align: center;
+}
+
+header { /* headers of the main components  */
+  background-color: rgb(36, 53, 53);
+  padding: 5px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.body { /* bodys of the main components  */
+  box-sizing: content-box;
+  height: 100%;
+  width: 100%;
+  /* border: solid white 1px; */
+  
 }
